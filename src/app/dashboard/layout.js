@@ -1,6 +1,6 @@
-import { jwt } from "jsonwebtoken";
+import { Auth } from "@/libs/auth";
+import jwt from "jsonwebtoken";
 import { cookies } from "next/headers";
-import Auth from "../libs/auth";
 import { redirect } from "next/navigation";
 
 export default function Layout({ children }) {

@@ -1,7 +1,7 @@
-import { jwt } from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 import { cookies } from "next/headers";
 
-export default function Auth() {
+export function Auth() {
   const token = cookies().get("token")?.value;
 
   if (!token) {
