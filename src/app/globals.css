@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input,
+  textarea {
+    @apply block w-full border-2 p-3 rounded-lg;
+  }
+  button {
+    @apply bg-indigo-800 text-white px-3 py-2 rounded-lg disabled:opacity-50;
+  }
+}
+
+@layer components {
+  .msg-success {
+    @apply bg-emerald-50 text-emerald-600 text-sm p-2 flex justify-center items-center;
+  }
+  .msg-error {
+    @apply bg-rose-50 text-rose-600 text-sm p-2 flex justify-center items-center;
+  }
+}
