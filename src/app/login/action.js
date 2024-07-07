@@ -51,7 +51,7 @@ export async function loginAction(_, formData) {
   };
 
   const jwtToken = jwt.sign(payload, process.env.JWT_SECRET);
-  cookies().set("token", jwtToken, { httpOnly: true });
+  cookies().set("token", jwtToken, { httpOnly: true, secure: true });
 
   redirect("/dashboard");
 }

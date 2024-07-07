@@ -2,13 +2,14 @@
 
 import { useActionState } from "react";
 import { loginAction } from "./action";
+import { loginWithGoogleAction } from "./action-loginwithgoogle";
 
 export default function Page() {
   const [state, formAction, pending] = useActionState(loginAction, null);
 
   return (
     <main className="flex h-screen justify-center items-center">
-      <form action={formAction} className="w-[300px">
+      {/* <form action={formAction} className="w-[300px">
         <input
           name="email"
           defaultValue={state?.data?.email}
@@ -28,6 +29,10 @@ export default function Page() {
         {state?.status === "error" ? (
           <div className="msg-error">{state.message}</div>
         ) : null}
+      </form> */}
+
+      <form action={loginWithGoogleAction}>
+        <button>login with google</button>
       </form>
     </main>
   );
